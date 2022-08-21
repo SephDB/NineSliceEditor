@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Content\bin\**" />
+    <Compile Remove="Content\obj\**" />
+    <EmbeddedResource Remove="Content\bin\**" />
+    <EmbeddedResource Remove="Content\obj\**" />
+    <None Remove="Content\bin\**" />
+    <None Remove="Content\obj\**" />
+    <Page Remove="Content\bin\**" />
+    <Page Remove="Content\obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.1.303" />
+	<PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
+    <PackageReference Include="MonoGame.Framework.WpfInterop" Version="1.9.2" />
+  </ItemGroup>
+
+</Project>
